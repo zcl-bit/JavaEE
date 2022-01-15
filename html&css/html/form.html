@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单标签</title>
+</head>
+<body>
+<!--
+    表单是由表单标签和表单项组成的:
+        form就是表单标签: 决定了往哪个服务器路径提交数据，采用什么方式提交数据，采用什么数据类型(格式)提交数据
+            1. action属性: 提交路径(目前我们没法用)
+            2. method属性: 提交方式(默认get和post)
+               get和post提交方式的区别:
+                    1. 携带数据的位置: get方式是在url地址后面，post方式是在http协议的请求体中
+                    2. 携带数据的类型: get方式只能够携带文本数据(字符串)，post方式可以携带任意数据(包含图片、音视频)
+                       所以文件上传肯定要使用post方式
+                    3. 携带数据的大小: get方式只能够携带少量数据，post方式携带数据的大小是没有限制(但是服务器会有限制)
+
+
+            3. enctype属性: 数据类型(了解)
+        表单项: 就是真真实实显示在我们眼前的那些组件(输入框、按钮、下拉框、单选框、多选框、文件上传组件等等)
+            1. 输入项:input标签
+                    type属性:表示input的类型，默认是text表示文本框
+                           1. text 文本框
+                           2. password 密码框
+                           3. radio 单选框，只有当name属性相同的时候才是一组单选框，才能够实现单选效果
+                           4. checkbox 多选框/复选框 同一组多选框name也要相同
+                           5. date 日期选择框
+                           6. file 文件选择框
+                           7. button 普通按钮(不内置任何功能)
+                           8. submit 提交按钮 内置提交表单的功能
+                           9. image 图片按钮 内置提交表单的功能
+                           10. reset 重置按钮
+                           11. hidden 隐藏域  携带数据，但是不让用户看到
+
+                    value属性:
+                           对于按钮而言就是按钮上的文字
+                           对于文本框、密码框、日期选择框、文件选择框而言，value就是输入或者选择的内容
+                           对于单选框、多选框而言，value的默认值全文on，我们需要手动设置value
+
+                    name属性: 只有当一个表单项有name属性的时候，它的数据才会被提交给服务器
+                    表单项的数据是以name=value的方式提交的
+
+                    readonly属性: 表示这个表单项是只读的，它的数据不能修改的，但是它的数据是可以提交给服务器的
+                    disabled属性: 表示这个表单项不可用，它的数据不能修改，并且它的数据无法提交
+                    placeholder属性：表示输入框中的提示信息
+                    checked属性: 单选框或者复选框默认选中
+
+            2. 下拉框: select，下拉框里边的每一个选项都是一个option标签
+               下拉框的name属性是写在select标签中，value属性是写在option标签中
+                selected属性就是下拉框的默认选中
+
+            3. 文本域: textarea
+               rows属性: 表示显示的行数
+               cols属性: 表示显示的列数
+
+-->
+<form action="https://www.baidu.com" method="get" enctype="application/x-www-form-urlencoded">
+    用户名<input type="text" name="username" placeholder="请输入用户名"/><br/>
+
+    密码<input type="password" name="pwd"> <br>
+
+    性别 <input type="radio" name="gender" value="male" checked>男
+    <input type="radio" name="gender" value="female">女<br>
+
+    兴趣爱好 <input type="checkbox" name="hobby" value="basketball">篮球
+    <input type="checkbox" name="hobby" value="football" checked>足球
+    <input type="checkbox" name="hobby" value="yumaoball">羽毛球
+    <input type="checkbox" name="hobby" value="pingpangball">乒乓球<br>
+
+    生日 <input type="date" name="birthday"><br>
+    上传头像 <input type="file" name="icon"><br>
+
+
+    学历
+    <select name="xueli">
+        <option value="gz">高中</option>
+        <option value="dz">大专</option>
+        <option value="bk">本科</option>
+        <option value="ss" selected>硕士</option>
+        <option value="bs">博士</option>
+    </select><br>
+    个人简介<textarea name="info" rows="10" cols="50"></textarea><br>
+
+    <input type="button" value="按钮">
+    <input type="submit">
+    <input type="image" src="../img/button.png">
+    <input type="reset">
+
+    <!--
+        向服务器携带数据: id=12
+    -->
+    <input type="hidden" name="id" value="12">
+</form>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css的并集选择器</title>
+    <style type="text/css" rel="stylesheet">
+        /*
+            并集选择器
+        */
+        .c1,span{
+            color: red;
+            font-size: 30px;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        目标:设置类名为c1的标签以及span的颜色为红色
+    -->
+    <div class="c1">你好世界</div>
+    <div>你好世界</div>
+    <span>你好span</span>
+    <span>你好span</span>
+    <span>你好span</span>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css的引入方式</title>
+    <style type="text/css" rel="stylesheet">
+        div{
+            color: blue;
+        }
+    </style>
+    <link rel="stylesheet" href="../css/demo.css">
+</head>
+<body>
+    <!--
+        css的引入方式（编写css的方式），总共有三种:
+        1. 行内样式: 就是在要修改样式的那个标签上，添加style属性编写css样式
+           优点: 直观
+           缺点: 无法实现样式的复用
+
+        2. 内部样式: 在当前html文档内部，编写一个style标签(建议放在head里面)，在style标签中
+           编写css代码
+           优点: 可以在当前html中实现复用
+           缺点: 不够直观
+
+        3. 外部样式: 在当前项目的css文件夹中，编写一个css扩展名的文件，然后哪个html需要使用到这个css
+           文件，就通过link标签将其引入就行了
+    -->
+    <!--
+        设置div中的内容的颜色为红色
+    -->
+    <div style="color: red">你好世界</div>
+    <div>你好世界</div>
+    <span>你好世界</span>
+</body>
+</html>

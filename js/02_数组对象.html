@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js的数组对象</title>
+</head>
+<body>
+    <script>
+        var arr1 = [1,2,3,4,"hello",true]
+
+        var arr2 = ["a","b","c"]
+
+        //将arr1和arr2进行合并，合并成为一个新的数组赋值给arr1
+        arr1 = arr1.concat(arr2)
+
+        //for循环遍历数组
+        for (var i = 0; i < arr1.length; i++) {
+            var arrElement = arr1[i];
+            console.log(arrElement)
+        }
+
+        //将数组中的元素拼接成一个字符串
+        console.log(arr1.join("#"))
+
+        //reverse()方法，反转数组
+        console.log(arr1.reverse())
+    </script>
+</body>
+</html>

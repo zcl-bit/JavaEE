@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>三种基本选择器</title>
+    <style type="text/css" rel="stylesheet">
+        /*通用选择器*/
+        *{
+            color: red;
+        }
+        /*
+            标签选择器
+        */
+        div{
+            color: blue;
+        }
+
+        /*
+            id选择器: #id值
+        */
+        #d1{
+            color: green;
+        }
+
+        /*
+            类选择器: .类名
+        */
+        .c1{
+            color: pink;
+        }
+
+        /*选择器的优先级: id选择器 > 类选择器 > 标签选择器 > 通用选择器*/
+    </style>
+</head>
+<body>
+    <div id="d1" class="c1">你好世界</div>
+    <div class="c1">你好世界</div>
+    <div class="c1">你好世界</div>
+    <div>你好世界</div>
+    <span>你好span</span>
+    <span>你好span</span>
+    <span>你好span</span>
+</body>
+</html>

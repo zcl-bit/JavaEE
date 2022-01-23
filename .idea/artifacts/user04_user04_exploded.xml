@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="user04:user04 exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/user04_user04_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="user04/web/user04" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="javaee-facet-classes" facet="user04/web/user04" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="druid-1.0.9" />
+          <element id="library" level="project" name="commons-logging-1.1.1 (2)" />
+          <element id="library" level="project" name="commons-dbutils-1.4" />
+          <element id="library" level="project" name="commons-beanutils-bean-collections-1.8.3 (2)" />
+          <element id="library" level="project" name="commons-beanutils-1.8.3 (2)" />
+          <element id="library" level="project" name="mysql-connector-java-8.0.17" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

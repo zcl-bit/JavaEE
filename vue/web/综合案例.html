@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>综合案例</title>
+</head>
+<body>
+    <div id = "app">
+        <table border = "1" cellspacing="0" width="500px">
+            <tr>
+                <th>编号</th>
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>专业</th>
+            </tr>
+        </table>
+    </div>
+    <script>
+        var vue = new Vue({
+            "el":"#app",
+            "data":{
+                "userList":[
+                    {
+                        "empId":11,
+                        "empName":"张三",
+                        "empAge":20,
+                        "empSubject":"Java"
+                    },{
+                        "empId":22,
+                        "empName":"李四",
+                        "empAge":21,
+                        "empSubject":"Java"
+                    },{
+                        "empId":33,
+                        "empName":"王五",
+                        "empAge":4,
+                        "empSubject":"Java"
+                    }
+                ]
+            }
+        })
+    </script>
+</body>
+</html>

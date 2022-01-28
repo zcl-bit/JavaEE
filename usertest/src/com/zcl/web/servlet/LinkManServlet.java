@@ -75,7 +75,6 @@ public class LinkManServlet extends BaseServlet {
             e.printStackTrace();
         }
     }
-
     /**
      * 添加联系人
      *
